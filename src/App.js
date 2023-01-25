@@ -1,24 +1,11 @@
 import { useState, useEffect } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 
-import Navbar from "./components/Navbar";
-import DotGroup from './components/DotGroup'
-import AnchorLink from "react-anchor-link-smooth-scroll";
-
-// const Link=({page, selctedPage, setSelectedPage})=>{
-//   const lowerCasePage=page.toLowerCase();
-
-//   return (
-//     <AnchorLink
-//       className={`${selectedPage === lowerCasePage ? 'text-#54C4DB':''}
-//         hover:text-#54C4DB transition duration-500`}
-//       href={`#${lowerCasePage}`}
-//       onClick={()=>setSelectedPage(lowerCasePage)}
-//     >
-//       {page}
-//     </AnchorLink>
-//   )
-// }
+import Navbar from "./scenes/Navbar";
+import DotGroup from './scenes/DotGroup'
+import Landing from "./scenes/Landing";
+import LineGradient from "./components/LineGradient";
+import Skills from './scenes/Skills'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -27,9 +14,13 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY === 0 ? setIsTopPage(true) : setIsTopPage(false);
-      window.addEventListener("scroll", handleScroll);
+      if (window.scrollY === 0) {
+        setIsTopPage(true);
+        setSelectedPage("home");
+      }
+      if (window.scrollY !== 0) setIsTopPage(false);
     };
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -42,13 +33,18 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 max-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-full">
         {isAboveMediumScreens && (
           <DotGroup
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
         )}
+        <Landing selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full">
+        <Skills />
       </div>
     </div>
   );
