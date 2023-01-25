@@ -18,6 +18,16 @@ const Landing = ({ selectedPage, setSelectedPage }) => {
       {/** IMAGE SECTION APRESENTATION */}
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isAboveMediumScreens ? (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{delay:0.2, duration: 0.9 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
           <div
             className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-full
           before:w-full before:max-w-full md:before:max-w-full before:h-full before:border-2 before:border-purple before:z-[-1]"
@@ -28,6 +38,7 @@ const Landing = ({ selectedPage, setSelectedPage }) => {
               className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[220px] xs:max-w-[350px] md:max-w-[450px]"
             />
           </div>
+          </motion.div>
         ) : (
           <img
             src={jailson}
