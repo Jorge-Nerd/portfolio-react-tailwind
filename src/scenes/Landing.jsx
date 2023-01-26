@@ -6,6 +6,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import jailson from "../assets/jailson-pro.png";
 import SocialMedia from "../components/SocialMedia";
 
+import cv from '../assets/cv-jailson.pdf'
+
 // import profile from "../assets/jail.jpg";
 
 const Landing = ({ selectedPage, setSelectedPage }) => {
@@ -97,6 +99,14 @@ const Landing = ({ selectedPage, setSelectedPage }) => {
           >
             Contact me
           </AnchorLink>
+          <a
+            className="bg-gradient-line font-playfair ml-5 text-deep-blue rounded-sm py-3 px-7 font-semibold hover:purple hover:text-white transition duration-500"
+            onClick={() => setSelectedPage("contact")}
+            href={cv}
+            download='Jailson-Resume'
+          >
+            Resume
+          </a>
         </motion.div>
       </div>
       <motion.div
