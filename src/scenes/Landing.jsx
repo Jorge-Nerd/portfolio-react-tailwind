@@ -91,7 +91,7 @@ const Landing = ({ selectedPage, setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="bg-gradient-rainblue font-playfair text-deep-blue rounded-sm py-3 px-7 font-semibold hover:purple hover:text-white transition duration-500"
+            className="bg-gradient-line font-playfair text-deep-blue rounded-sm py-3 px-7 font-semibold hover:purple hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >

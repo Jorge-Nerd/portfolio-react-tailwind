@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import project1 from '../assets/project-1.png'
 import project2 from '../assets/project-2.png'
-import project3 from '../assets/project-3.jpeg'
+
 
 const container = {
   hidden: {},
@@ -57,16 +57,14 @@ const Projects = () => {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-red">PRO</span>JECTS
+            <span className="text-purple">PRO</span>JECTS
           </p>
           <div className="flex justify-center mt-5">
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at. At magna ornare dictum lectus. Purus massa morbi
-          purus nec eget eleifend ut elit.
+        <p className="mt-10 mb-10 font-playfair font-semibold">
+        Here are some personal projects
         </p>
       </motion.div>
 

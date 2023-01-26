@@ -19,6 +19,9 @@ module.exports = {
         backgroundImage:(theme)=>({
           'gradient-rainblue':'linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)',
           'gradient-blue':'linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)',
+          'gradient-j':'linear-gradient(90deg, rgba(30,60,157,1) 4%, rgba(34,88,134,1) 49%, rgba(89,36,138,1) 90%)',
+          'gradient-line':' linear-gradient(90deg, rgba(36,215,84,1) 4%, rgba(47,154,210,1) 29%, rgba(126,68,180,1) 68%)',
+          'gradient-area':'linear-gradient(90deg, rgba(212,245,221,1) 4%, rgba(210,232,244,1) 29%, rgba(229,210,246,1) 68%)',
         }),
         fontFamily: {
           playfair: ["Playfair Display", "serif"],

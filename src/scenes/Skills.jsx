@@ -88,41 +88,41 @@ const Skills = () => {
               </motion.div>
             </div>
           ) : (
-            <div className="flex mx-auto relative z-0 cursor-pointer border-purple before:z-[-1]">
-              <div className=" flex max-w-1 md:max-w-1/6 ">
+            <div className="flex ml-0 gap-4 relative z-0 cursor-pointer border-purple before:z-[-1]">
+              <div className="basis-1/2 md:basis-1/5 flex justify-center">
                 <img
                   src={html}
                   alt="html-logo"
-                  className="z-10  max-w-1 md:w-1/6 max-h-[85px] hover:scale-125 transition ease-in-out delay-150 duration-300"
+                  className="z-10 hover:scale-125 transition ease-in-out delay-150 duration-300"
                 />
               </div>
-              <div className=" flex max-w-1 md:max-w-1/6 ">
+              <div className=" basis-1/2 md:basis-1/5 flex justify-center">
                 <img
                   src={css}
                   alt="css-logo"
-                  className="z-10  max-w-1 md:max-w-1/6  max-h-[85px] hover:scale-125 transition ease-in-out delay-150 duration-300"
+                  className="z-10  hover:scale-125 transition ease-in-out delay-150 duration-300"
                 />
               </div>
-              <div className="max-w-1 md:max-w-1/6 ">
+              <div className="basis-1/2 md:basis-1/5 flex justify-center">
                 <img
                   src={js}
                   alt="javascript-logo"
-                  className="z-10  max-w-1 md:max-w-1/6 ml-3 max-h-[85px] hover:scale-125 transition ease-in-out delay-150 duration-300"
+                  className="z-10   hover:scale-125 transition ease-in-out delay-150 duration-300"
                 />
               </div>
 
-              <div className="max-w-1 md:max-w-1/6 ">
+              <div className="basis-1/2 md:basis-1/5 flex justify-center">
                 <img
                   src={react}
                   alt="react-logo"
-                  className="z-10  max-w-1 md:max-w-1/6 ml-3 max-h-[85px] hover:scale-125 transition ease-in-out delay-150 duration-300"
+                  className="z-10   hover:scale-125 transition ease-in-out delay-150 duration-300"
                 />
               </div>
-              <div className="max-w-1 md:max-w-1/6 ">
+              <div className="basis-1/2 md:basis-1/5 flex justify-center ">
                 <img
                   src={github}
                   alt="github-logo"
-                  className="z-10  max-w-1 md:max-w-1/6 ml-3 max-h-[85px] hover:scale-125 transition ease-in-out delay-150 duration-300"
+                  className="z-10  hover:scale-125 transition ease-in-out delay-150 duration-300"
                 />
               </div>
             </div>

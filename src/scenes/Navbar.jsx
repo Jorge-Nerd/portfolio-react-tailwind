@@ -22,7 +22,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const Navbar = ({ isTopPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggle, setIsMenuToggle] = useState(false);
   const isAboveSmallsScreen = useMediaQuery("(min-width:768px)");
-  const navBg = isTopPage ? "" : "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500";
+  const navBg = isTopPage ? "" : "bg-gradient-j";
   return (
     <nav className={`${navBg} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
