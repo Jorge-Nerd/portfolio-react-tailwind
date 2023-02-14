@@ -65,7 +65,7 @@ const Navbar = ({ isTopPage, selectedPage, setSelectedPage }) => {
           <div className="fixed right-0 bottom-0 h-full bg-pubg w-[300px]">
             <div className="flex justify-end p-12">
               <button onClick={() => setIsMenuToggle(!isMenuToggle)}>
-                <img alt="close-icon" src="../assets/close-icon.svg"></img>
+                <img alt="close-icon" src="../assets/close-icon.svg" className="hover:bg-pink-600"></img>
               </button>
             </div>
             {/** MENU ITEMS */}
