@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaGithub } from "react-icons/fa";
 
 const SocialMedia = () => {
   return (
@@ -13,12 +14,12 @@ const SocialMedia = () => {
             </a>
         
         <a 
-            href="https://www.facebook.com" 
-            className="hover:opacity-50 transition duration-500"
+            href="https://github.com/Jorge-Nerd" 
+            className="hover:opacity-50 transition duration-500 pt-2"
             target='_blank'
             rel='noreferrer'
             >
-                <img src="../assets/facebook.png" alt="linkedin" />
+                <FaGithub className='scale-150'/>
             </a>
         
         <a 
