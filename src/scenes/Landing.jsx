@@ -6,7 +6,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import jailson from "../assets/jailson-pro.png";
 import SocialMedia from "../components/SocialMedia";
 
-import cv from '../assets/cv-jailson.pdf'
+import cv from "../assets/Jailson-Resume.pdf";
 
 // import profile from "../assets/jail.jpg";
 
@@ -31,7 +31,7 @@ const Landing = ({ selectedPage, setSelectedPage }) => {
             }}
           >
             <div
-              className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-full
+              className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-20 before:rounded-full
           before:w-full before:max-w-full md:before:max-w-full before:h-full before:border-2 before:border-purple before:z-[-1]"
             >
               <img
@@ -42,11 +42,22 @@ const Landing = ({ selectedPage, setSelectedPage }) => {
             </div>
           </motion.div>
         ) : (
-          <img
-            src={jailson}
-            alt="profile"
-            className="z-10 w-full max-w-[220px] xs:max-w-[350px] md:max-w-[450px]"
-          />
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.9 }}
+            variants={{
+              hidden: { opacity: 0, y: -50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <img
+              src={jailson}
+              alt="profile"
+              className="z-10 w-full max-w-[220px] xs:max-w-[350px] md:max-w-[450px]"
+            />
+          </motion.div>
         )}
       </div>
       {/** MAIN SECTION */}
@@ -72,10 +83,9 @@ const Landing = ({ selectedPage, setSelectedPage }) => {
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            I am a front-end developer with skills in
-            responsive design, ability to work teamwork. Always looking to learn
-            and keep up to date up-to-date with the latest front-end
-            technologies.
+            I am a front-end developer with skills in responsive design, ability
+            to work teamwork. Always looking to learn and keep up to date
+            up-to-date with the latest front-end technologies.
           </p>
         </motion.div>
 
@@ -103,7 +113,7 @@ const Landing = ({ selectedPage, setSelectedPage }) => {
             className="bg-gradient-line font-playfair ml-5 text-deep-blue rounded-sm py-3 px-7 font-semibold hover:purple hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href={cv}
-            download='Jailson-Resume'
+            download="Jailson-Resume"
           >
             Resume
           </a>
